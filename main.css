@@ -1,0 +1,39 @@
+/* スマートフォン縦 (0-480px) */
+@media only screen and (max-width: 480px) {
+    body{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+/* スマートフォン横 (480-670px) */
+@media only screen and (min-width: 481px) and (max-width: 670px) {
+    body{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+/* タブレット (670-960px) */
+@media only screen and (min-width: 671px) and (max-width: 960px){
+    body{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+/* ノートPC (960-1280px) */
+@media only screen and (min-width: 961px) and (max-width: 1280px){
+    body{
+        padding-left: 20%;
+        padding-right: 15%;
+    }
+}
+
+/* モニター等 (1280px以上) */
+@media only screen and (min-width: 1281px){
+    body{
+        padding-left: 20%;
+        padding-right: 15%;
+    }
+}
