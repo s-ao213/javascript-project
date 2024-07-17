@@ -4,6 +4,141 @@ body{
     font-style: normal;
 }
 
+h1 {
+    position: relative;
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+}
+
+h1:after {
+    position: absolute;
+    content: '';
+    left: -7px;
+    top: -7px;
+    border-width: 0 0 15px 15px;
+    border-style: solid;
+    border-color: #fff #fff #a8d4ff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  h2:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px rgb(119, 195, 223);
+  }
+  h2:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px rgb(119, 195, 223);
+  }
+
+  .point {
+    position: relative;
+    border-top: solid 2px #80c8d1;
+    border-bottom: solid 2px #80c8d1;
+    background: #f4f4f4;
+    line-height: 1.4;
+    padding: 0.4em 0.5em;
+    margin: 2em 0 0.5em;
+  }
+  
+  .point:after {
+    /*タブ*/
+    position: absolute;
+    font-family: "Font Awesome 5 Free",'Quicksand','Avenir','Arial',sans-serif;
+    font-weight: 900;
+    content: '\f0a7\ POINT';
+    background: #80c8d1;
+    color: #fff;
+    left: 0px;
+    bottom: 100%;
+    border-radius: 5px 5px 0 0;
+    padding: 5px 7px 3px;
+    font-size: 0.7em;
+    line-height: 1;
+    letter-spacing: 0.05em;
+}
+
+h3 {
+    position: relative;
+    padding-left: 30px;
+    color:#153c6e;
+  }
+  
+  h3:before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f121";
+    background: #c9e2ff;
+    color: #153c6e;
+    font-size: 15px;
+    border-radius: 50%;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  h4 {
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: transparent;/*背景透明に*/
+    border-left: solid 5px #7db4e6;/*左線*/
+  }
+.code-container {
+    position: relative;
+    background-color: #2d2d2d;
+    padding: 15px;
+    border-radius: 8px;
+    overflow: auto;
+}
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.code-header span {
+    color: white;
+    font-size: 1.1em;
+}
+.copy-button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.copy-button:active {
+    background-color: #0056b3;
+}
+pre {
+    margin: 0;
+}
+
 /* スマートフォン縦 (0-480px) */
 @media only screen and (max-width: 480px) {
     body{

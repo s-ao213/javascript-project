@@ -1,11 +1,339 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<!DOCTYPE html> 
+<html lang="ja"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>ミニゲーム作成</title> 
+        <link rel="stylesheet" href="main.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    </head> 
     
-</body>
+    <body> 
+        <h1>javascriptを使ったミニゲーム製作体験</h1>
+
+        <section>
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#1st">どんなゲームを作るか</a></li>
+                <li><a href="#2nd">javascriptの基礎知識</a></li>
+                <li><a href="#3rd">ゲームの作り方</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2 id="1st">どんなゲームを作るか</h2>
+            <p>
+                今回作成するのは、簡単な迷路を使ったタイムトライアルゲームです。具体的には下記のデモページにあるようなゲームを作成します。
+                <br>
+                <a href="">作成したいゲームのデモページ</a>
+                <br>
+            </p>
+            <div class="point">
+                <h3>このゲームを作成すると身につく知識</h3>
+                <ul>
+                    <li>変数宣言について（let、const）</li>
+                    <li>データ型について（数値、文字列、配列、オブジェクト、日付、ブール値）</li>
+                    <li>演算子と制御構文について（if文、forループ）</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section>
+            <h2 id="2nd">JavaScriptの基礎知識</h2>
+            <p>
+                JavaScriptはウェブ開発で広く使われるプログラミング言語です。ここでは、JavaScriptの基本的な構文と概念について説明します。
+            </p>
+        
+            <h3 class="code1">変数宣言</h3>
+            <p>
+                JavaScriptでは、変数を宣言する方法として<code>var</code>、<code>let</code>、<code>const</code>があります。<code>let</code>と<code>const</code>は<code>var</code>よりも新しい方法であり、ブロックスコープを持つため、より安全に使えます。ブロックスコープとは、中括弧 <code>{}</code>で囲まれたブロック内でのみ有効な変数のスコープを指します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">// varの例
+var x = 10;
+console.log(x); // 10
+
+// letの例
+let y = 20;
+console.log(y); // 20
+
+// constの例
+const z = 30;
+console.log(z); // 30</code>
+                </pre>
+            </div>
+
+        
+            <h3 class="code1">データ型</h3>
+            <p>
+                JavaScriptには以下のような基本的なデータ型があります。
+            </p>
+            <ul>
+                <li>文字列型（String）</li>
+                <li>数値型（Number）</li>
+                <li>ブール型（Boolean）</li>
+                <li>特殊型（Undefined, Null）</li>
+                <li>シンボル型（Symbol）</li>
+                <li>オブジェクト型（Object, Array, Function）</li>
+            </ul>
+            
+            <h4>文字列型（String）</h4>
+            <p>テキストデータを表すためのデータ型です。文字列はダブルクォート " またはシングルクォート ' で囲まれます。</p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">let text = "Hello, World!";</code>
+                </pre>
+            </div>
+            
+            <h4>数値型（Number）</h4>
+            <p>整数および浮動小数点数を表すためのデータ型です。JavaScriptでは整数と浮動小数点数は同じ数値型として扱われます。</p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">let number = 42;
+let decimal = 3.14;</code>
+                </pre>
+            </div>
+            
+            <h4>ブール型（Boolean）</h4>
+            <p>真（true）または偽（false）の2つの値を持つデータ型です。</p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">let isTrue = true;
+let isFalse = false;</code>
+                </pre>
+            </div>
+            
+            <h4>特殊型（Undefined, Null）</h4>
+            <p>Undefined は変数が定義されていないことを示し、Null は変数に何も値が設定されていないことを示します。</p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">let undefinedValue;
+let nullValue = null;</code>
+                </pre>
+            </div>
+            
+            <h4>シンボル型（Symbol）</h4>
+            <p>一意の識別子を表すデータ型です。主にオブジェクトのプロパティキーとして使用されます。</p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">let symbol = Symbol('description');</code>
+                </pre>
+            </div>
+            
+            <h4>オブジェクト型（Object, Array, Function）</h4>
+            <p>複雑なデータ構造を表すためのデータ型です。オブジェクト、配列、関数が含まれます。</p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">let obj = { name: "Alice", age: 25 };
+let array = [1, 2, 3, 4, 5];
+let func = function() { console.log("Hello!"); };</code>
+                </pre>
+            </div>
+        
+            <h3 class="code1">演算子</h3>
+            <p>
+                JavaScriptでは、算術演算子や比較演算子、論理演算子などが使われます。
+            </p>
+            <ul>
+                <li>算術演算子： <code>+</code>（加算）、<code>-</code>（減算）、<code>*</code>（乗算）、<code>/</code>（除算）、<code>%</code>（剰余）</li>
+                <li>比較演算子： <code>==</code>（等価）、<code>===</code>（厳密等価）、<code>!=</code>（不等価）、<code>!==</code>（厳密不等価）、<code>&gt;</code>（より大きい）、<code>&lt;</code>（より小さい）、<code>&gt;=</code>（以上）、<code>&lt;=</code>（以下）</li>
+                <li>論理演算子： <code>&&</code>（論理積、AND）、<code>||</code>（論理和、OR）、<code>!</code>（論理否定、NOT）</li>
+            </ul>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">// 算術演算子
+let sum = 10 + 5; // 15
+let difference = 10 - 5; // 5
+let product = 10 * 5; // 50
+let quotient = 10 / 5; // 2
+let remainder = 10 % 3; // 1 (10を3で割った余り)
+
+// 比較演算子
+let isEqual = (10 == 10); // true
+let isStrictEqual = (10 === "10"); // false (型が異なるため)
+let isNotEqual = (10 != 5); // true
+let isGreaterThan = (10 > 5); // true
+let isLessThanEqual = (10 <= 10); // true
+
+// 論理演算子
+let logicalAnd = (true && false); // false
+let logicalOr = (true || false); // true
+let logicalNot = !true; // false</code>
+                </pre>
+            </div>
+        
+            <h3 class="code1">制御構文</h3>
+            <p>
+                JavaScriptでは、コードの実行を制御するために、条件分岐やループが使用されます。
+            </p>
+        
+            <h4>条件分岐（if文）</h4>
+            <p>
+                条件分岐（if文）は、特定の条件が真（true）であるかどうかを確認し、条件に応じて異なるコードブロックを実行します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">if (条件式) {
+    // 条件が真の場合に実行されるコード
+} else if (別の条件式) {
+    // 別の条件が真の場合に実行されるコード
+} else {
+    // どの条件も満たさない場合に実行されるデフォルトのコード
+}</code>
+</pre>
+            </div>
+
+            
+            <h4>ループ（forループ）</h4>
+            <p>
+                forループは特定の条件の間、コードブロックを繰り返し実行します。主に配列やオブジェクトの要素やプロパティに対して使用されます。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>javascript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">// 標準的なforループ
+for (初期化式; 条件式; 更新式) {
+    // 条件式が真の間、繰り返し実行されるコード
+}
+
+// for...ofループ（配列の各要素に対して使用）
+for (要素 of 配列) {
+    // 配列の各要素に対して繰り返し実行されるコード
+}
+
+// for...inループ（オブジェクトのプロパティに対して使用）
+for (プロパティ in オブジェクト) {
+    // オブジェクトのプロパティごとに繰り返し実行されるコード
+}</code>
+            </pre>
+            </div>
+        
+            <h3 class="code1">JavaScriptの関数の定義方法</h3>
+        <p>
+            JavaScriptでは、以下のように異なる方法で関数を定義することができます。それぞれの方法には特有の特徴があります。
+        </p>
+        
+        <!-- 宣言関数の説明 -->
+        <h4>1. 宣言関数（Function Declaration）</h4>
+        <p>
+            宣言関数は、<code>function</code> キーワードを使って定義します。関数名を指定し、その関数が必要とする引数を丸括弧の中に書きます。関数が実行されたときに行う処理は波括弧の中に書きます。
+        </p>
+        <div class="code-container">
+            <div class="code-header">
+                <span>javascript</span>
+                <button class="copy-button" onclick="copyCode()">コピー</button>
+            </div>
+            <pre><code class="language-javascript">function 関数名(引数1, 引数2, ...) { // 関数が実行されたときに行う処理 } </code>
+            </pre>
+        </div>
+        <pre><code>
+</code></pre>
+        
+        
+        <!-- 関数式の説明 -->
+        <h4>2. 関数式（Function Expression）</h4>
+        <p>
+            関数式は、関数を変数に代入する形式で定義します。関数名は省略することもできます。関数が実行されたときに行う処理は波括弧の中に書きます。
+        </p>
+        <div class="code-container">
+            <div class="code-header">
+                <span>javascript</span>
+                <button class="copy-button" onclick="copyCode()">コピー</button>
+            </div>
+            <pre><code class="language-javascript">
+                const 変数名 = function(引数1, 引数2, ...) { // 関数が実行されたときに行う処理 };</code>
+            </pre>
+        </div>
+        
+        <!-- アロー関数の説明 -->
+        <h4>3. アロー関数（Arrow Function）</h4>
+        <p>
+            アロー関数は、関数をより簡潔に定義するための方法です。<code>=></code> を使って関数を定義します。引数が1つの場合は丸括弧を省略できます。関数が実行されたときに行う処理は波括弧の中に書きます。
+        </p>
+        <div class="code-container">
+            <div class="code-header">
+                <span>javascript</span>
+                <button class="copy-button" onclick="copyCode()">コピー</button>
+            </div>
+            <pre><code class="language-javascript">
+            const 変数名 = (引数1, 引数2, ...) => { // 関数が実行されたときに行う処理 };</code>
+            </pre>
+        </div>
+
+        </section>
+        <section>
+            <h2 id="3rd">ゲームの作り方</h2>
+            <h3>ファイルの作成</h3>
+            <h3>画像の保存</h3>
+            <h3> HTML&CSSファイルの設定</h3>
+            <h3>変数の設定</h3>
+            <h3>関数の設定</h3>
+            <h3>実行処理</h3>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>JavaScript</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">function checkForCompletion() {
+            if (player.x === startPosition.x && player.y === startPosition.y) {
+                if (deliveredPackages === customers.length) {
+                    const endTime = new Date();
+                    const timeTaken = (endTime - startTime) / 1000;
+                    logMessage(`ゲームクリア！かかった時間: ${timeTaken}秒`);
+                } else {
+                    logMessage('まだ荷物を運びきれていないよ！！');
+                }
+            }
+        }</code></pre>
+            </div>
+
+            <!-- <div class="code-container">
+                <div class="code-header">
+                    <span>言語</span>
+                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                </div>
+                <pre><code class="language-javascript">
+
+                    </code>
+                </pre>
+            </div> -->
+        </section>
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+    </body> 
 </html>
