@@ -76,13 +76,13 @@ h2 {
     letter-spacing: 0.05em;
 }
 
-.codes {
+h3 {
     position: relative;
     padding-left: 30px;
     color:#153c6e;
   }
   
-  .codes:before {
+h3:before {
     position: absolute;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;

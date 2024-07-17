@@ -33,12 +33,14 @@
                 <br>
             </p>
             <div class="point">
-                <h3>このゲームを作成すると身につく知識</h3>
+                <br>
+                <strong style="font-size: 120%;">このゲームを作成すると身につく知識</strong>
                 <ul>
                     <li>変数宣言について（let、const）</li>
                     <li>データ型について（数値、文字列、配列、オブジェクト、日付、ブール値）</li>
                     <li>演算子と制御構文について（if文、forループ）</li>
                 </ul>
+                <br>
             </div>
         </section>
         
@@ -48,16 +50,16 @@
                 JavaScriptはウェブ開発で広く使われるプログラミング言語です。ここでは、JavaScriptの基本的な構文と概念について説明します。
             </p>
         
-            <h3 class="code1">変数宣言</h3>
+            <h3>変数宣言</h3>
             <p>
                 JavaScriptでは、変数を宣言する方法として<code>var</code>、<code>let</code>、<code>const</code>があります。<code>let</code>と<code>const</code>は<code>var</code>よりも新しい方法であり、ブロックスコープを持つため、より安全に使えます。ブロックスコープとは、中括弧 <code>{}</code>で囲まれたブロック内でのみ有効な変数のスコープを指します。
             </p>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code1')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">// varの例
+                <pre><code id="code1" class="language-javascript">// varの例
 var x = 10;
 console.log(x); // 10
 
@@ -72,7 +74,7 @@ console.log(z); // 30</code>
             </div>
 
         
-            <h3 class="code1">データ型</h3>
+            <h3>データ型</h3>
             <p>
                 JavaScriptには以下のような基本的なデータ型があります。
             </p>
@@ -90,9 +92,9 @@ console.log(z); // 30</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code2')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">let text = "Hello, World!";</code>
+                <pre><code id="code2" class="language-javascript">let text = "Hello, World!";</code>
                 </pre>
             </div>
             
@@ -101,9 +103,9 @@ console.log(z); // 30</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code3')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">let number = 42;
+                <pre><code id="code3" class="language-javascript">let number = 42;
 let decimal = 3.14;</code>
                 </pre>
             </div>
@@ -113,9 +115,9 @@ let decimal = 3.14;</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code4')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">let isTrue = true;
+                <pre><code id="code4" class="language-javascript">let isTrue = true;
 let isFalse = false;</code>
                 </pre>
             </div>
@@ -125,9 +127,9 @@ let isFalse = false;</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code5')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">let undefinedValue;
+                <pre><code id="code5" class="language-javascript">let undefinedValue;
 let nullValue = null;</code>
                 </pre>
             </div>
@@ -137,9 +139,9 @@ let nullValue = null;</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code6')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">let symbol = Symbol('description');</code>
+                <pre><code id="code6" class="language-javascript">let symbol = Symbol('description');</code>
                 </pre>
             </div>
             
@@ -148,15 +150,15 @@ let nullValue = null;</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code7')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">let obj = { name: "Alice", age: 25 };
+                <pre><code id="code7" class="language-javascript">let obj = { name: "Alice", age: 25 };
 let array = [1, 2, 3, 4, 5];
 let func = function() { console.log("Hello!"); };</code>
                 </pre>
             </div>
         
-            <h3 class="code1">演算子</h3>
+            <h3>演算子</h3>
             <p>
                 JavaScriptでは、算術演算子や比較演算子、論理演算子などが使われます。
             </p>
@@ -168,9 +170,9 @@ let func = function() { console.log("Hello!"); };</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code8')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">// 算術演算子
+                <pre><code id="code8" class="language-javascript">// 算術演算子
 let sum = 10 + 5; // 15
 let difference = 10 - 5; // 5
 let product = 10 * 5; // 50
@@ -181,8 +183,8 @@ let remainder = 10 % 3; // 1 (10を3で割った余り)
 let isEqual = (10 == 10); // true
 let isStrictEqual = (10 === "10"); // false (型が異なるため)
 let isNotEqual = (10 != 5); // true
-let isGreaterThan = (10 > 5); // true
-let isLessThanEqual = (10 <= 10); // true
+let isGreaterThan = (10 &gt; 5); // true
+let isLessThanEqual = (10 &lt;= 10); // true
 
 // 論理演算子
 let logicalAnd = (true && false); // false
@@ -191,7 +193,7 @@ let logicalNot = !true; // false</code>
                 </pre>
             </div>
         
-            <h3 class="code1">制御構文</h3>
+            <h3>制御構文</h3>
             <p>
                 JavaScriptでは、コードの実行を制御するために、条件分岐やループが使用されます。
             </p>
@@ -203,9 +205,9 @@ let logicalNot = !true; // false</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code9')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">if (条件式) {
+                <pre><code id="code9" class="language-javascript">if (条件式) {
     // 条件が真の場合に実行されるコード
 } else if (別の条件式) {
     // 別の条件が真の場合に実行されるコード
@@ -223,9 +225,9 @@ let logicalNot = !true; // false</code>
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code10')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">// 標準的なforループ
+                <pre><code id="code10" class="language-javascript">// 標準的なforループ
 for (初期化式; 条件式; 更新式) {
     // 条件式が真の間、繰り返し実行されるコード
 }
@@ -242,7 +244,7 @@ for (プロパティ in オブジェクト) {
             </pre>
             </div>
         
-            <h3 class="code1">JavaScriptの関数の定義方法</h3>
+            <h3>JavaScriptの関数の定義方法</h3>
         <p>
             JavaScriptでは、以下のように異なる方法で関数を定義することができます。それぞれの方法には特有の特徴があります。
         </p>
@@ -255,9 +257,9 @@ for (プロパティ in オブジェクト) {
         <div class="code-container">
             <div class="code-header">
                 <span>javascript</span>
-                <button class="copy-button" onclick="copyCode()">コピー</button>
+                <button class="copy-button" onclick="copyCode('code11')">コピー</button>
             </div>
-            <pre><code class="language-javascript">function 関数名(引数1, 引数2, ...) { // 関数が実行されたときに行う処理 } </code>
+            <pre><code id="code11" class="language-javascript">function 関数名(引数1, 引数2, ...) { // 関数が実行されたときに行う処理 } </code>
             </pre>
         </div>
         <pre><code>
@@ -272,9 +274,9 @@ for (プロパティ in オブジェクト) {
         <div class="code-container">
             <div class="code-header">
                 <span>javascript</span>
-                <button class="copy-button" onclick="copyCode()">コピー</button>
+                <button class="copy-button" onclick="copyCode('code12')">コピー</button>
             </div>
-            <pre><code class="language-javascript">
+            <pre><code id="code12" class="language-javascript">
                 const 変数名 = function(引数1, 引数2, ...) { // 関数が実行されたときに行う処理 };</code>
             </pre>
         </div>
@@ -287,9 +289,9 @@ for (プロパティ in オブジェクト) {
         <div class="code-container">
             <div class="code-header">
                 <span>javascript</span>
-                <button class="copy-button" onclick="copyCode()">コピー</button>
+                <button class="copy-button" onclick="copyCode('code13')">コピー</button>
             </div>
-            <pre><code class="language-javascript">
+            <pre><code id="code13" class="language-javascript">
             const 変数名 = (引数1, 引数2, ...) => { // 関数が実行されたときに行う処理 };</code>
             </pre>
         </div>
@@ -298,7 +300,162 @@ for (プロパティ in オブジェクト) {
         <section>
             <h2 id="3rd">ゲームの作り方</h2>
             <h3>ファイルの作成</h3>
+            <p>
+                今回はHTML、CSS、javascriptを使用するので3つのファイルを作成します。ファイル名はバグ防止のため同じものにしてください。
+                <br>
+                <ul>
+                    <li>HTML用ファイル：index.html</li>
+                    <li>javascript用ファイル：game.js</li>
+                    <li>CSS用ファイル：style.css</li>
+                </ul>
+                これらのファイルを用意出来たら、index.htmlとstyle.cssにそれぞれ下記のコードを貼り付けます。今回はjavascriptの勉強が目的ですので、ここではHTML、CSSについての解説はしていません。気になる人は各自調べてみてください。
+                <br>
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>index.html</span>
+                    <button class="copy-button" onclick="copyCode('code14')">コピー</button>
+                </div>
+                <pre><code id="code14" class="language-javascript">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;迷路ゲーム&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;        
+    &lt;div class="explain"&gt;
+        &lt;h1&gt;迷路ゲーム&lt;/h1&gt;
+        &lt;h2&gt;ルール説明&lt;/h2&gt;
+        &lt;p&gt;左上のキャラクターを使って、なるべく早く迷路内の落し物持ち主に届けて、1番左上のマスに戻ってくるタイムを競うゲームである。&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;荷物は一度に一つしか持てません。&lt;/li&gt;
+            &lt;li&gt;黄色い場所が地面で緑の場所が壁（障害物）です。&lt;/li&gt;
+            &lt;li&gt;荷物を渡すときは、正しい持ち主の周りのマスを踏むと渡せるようになっています。&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id="container"&gt;
+        &lt;div id="maze-container"&gt;&lt;/div&gt;
+        &lt;div id="log-container"&gt;ここにはゲームのログが表示されるよ！&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="game.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;                    
+                    </code>
+                </pre>
+            </div>
+            
+            <br>
+            
+            <div class="code-container">
+                <div class="code-header">
+                    <span>style.css</span>
+                    <button class="copy-button" onclick="copyCode('code15')">コピー</button>
+                </div>
+                <pre><code id="code15" class="language-javascript">
+body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
+.explain{
+    padding-right: 45%;
+}
+
+#maze-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(20, 30px);
+    grid-template-rows: repeat(11, 30px);
+    gap: 2px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#container {
+    display: flex;
+}
+
+.player {
+    background-color: #0f0;
+    background-image: url('player.gif');
+}
+
+.player-left {
+    background-image: url('player-left.gif');
+}
+
+.player-right {
+    background-image: url('player-right.gif');
+}
+
+.customer {
+    background-color: #00f;
+}
+
+.package {
+    background-color: #f00;
+}
+
+.wall {
+    background-color: #006036;
+}
+
+.path {
+    background-color: #D0A900;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+#log-container {
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 5px solid rgb(0, 117, 226);
+    padding: 10px;
+    width: 300px;
+    height: 250px;
+    overflow-y: auto;
+    background-color: #000;
+    color: #ddd;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.car {
+    background-image: url('car.png');
+    background-size: cover;
+}                    
+        </code>
+                </pre>
+            </div>
             <h3>画像の保存</h3>
+            <p>
+                次にゲームで使用する画像を保存してきます。このゲームで使用するのは4人分のキャラクターと3人分の荷物のイラストです。今回イラストは<a href="https://hpgpixer.jp/#google_vignette">こちら</a>のサイト様でお借りしました。
+                <ul>
+                        <li>プレイヤーのキャラクター</li>
+                        <li>配達先のキャラクターA</li>
+                        <li>配達先のキャラクターB</li>
+                        <li>配達先のキャラクターC</li>
+                        <li>配達物A</li>
+                        <li>配達物B</li>
+                        <li>配達物C</li>
+                </ul>
+            </p>
             <h3> HTML&CSSファイルの設定</h3>
             <h3>変数の設定</h3>
             <h3>関数の設定</h3>
@@ -306,9 +463,9 @@ for (プロパティ in オブジェクト) {
             <div class="code-container">
                 <div class="code-header">
                     <span>JavaScript</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code1111')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">function checkForCompletion() {
+                <pre><code id="code1111" class="language-javascript">function checkForCompletion() {
             if (player.x === startPosition.x && player.y === startPosition.y) {
                 if (deliveredPackages === customers.length) {
                     const endTime = new Date();
@@ -324,9 +481,9 @@ for (プロパティ in オブジェクト) {
             <!-- <div class="code-container">
                 <div class="code-header">
                     <span>言語</span>
-                    <button class="copy-button" onclick="copyCode()">コピー</button>
+                    <button class="copy-button" onclick="copyCode('code')">コピー</button>
                 </div>
-                <pre><code class="language-javascript">
+                <pre><code id="code" class="language-javascript">
 
                     </code>
                 </pre>
