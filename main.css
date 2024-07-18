@@ -27,9 +27,9 @@ h1:after {
 h2 {
     position: relative;
     padding-left: 25px;
-  }
-  
-  h2:before {
+}
+
+h2:before {
     position: absolute;
     content: '';
     bottom: -3px;
@@ -39,17 +39,17 @@ h2 {
     border: none;
     border-left: solid 15px transparent;
     border-bottom: solid 15px rgb(119, 195, 223);
-  }
-  h2:after {
+}
+h2:after {
     position: absolute;
     content: '';
     bottom: -3px;
     left: 10px;
     width: 100%;
     border-bottom: solid 3px rgb(119, 195, 223);
-  }
+}
 
-  .point {
+.point {
     position: relative;
     border-top: solid 2px #80c8d1;
     border-bottom: solid 2px #80c8d1;
@@ -57,9 +57,9 @@ h2 {
     line-height: 1.4;
     padding: 0.4em 0.5em;
     margin: 2em 0 0.5em;
-  }
-  
-  .point:after {
+}
+
+.point:after {
     /*タブ*/
     position: absolute;
     font-family: "Font Awesome 5 Free",'Quicksand','Avenir','Arial',sans-serif;
@@ -80,8 +80,8 @@ h3 {
     position: relative;
     padding-left: 30px;
     color:#153c6e;
-  }
-  
+}
+
 h3:before {
     position: absolute;
     font-family: "Font Awesome 5 Free";
@@ -99,14 +99,15 @@ h3:before {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-  }
+}
 
-  h4 {
+h4 {
     padding: 0.25em 0.5em;/*上下 左右の余白*/
     color: #494949;/*文字色*/
     background: transparent;/*背景透明に*/
     border-left: solid 5px #7db4e6;/*左線*/
-  }
+}
+
 .code-container {
     position: relative;
     background-color: #2d2d2d;
