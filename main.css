@@ -145,6 +145,10 @@ pre {
     color: #494949;
 }
 
+a{
+    color: black;
+}
+
 /* スマートフォン縦 (0-480px) */
 @media only screen and (max-width: 480px) {
     body{
@@ -183,8 +187,4 @@ pre {
         padding-left: 20%;
         padding-right: 15%;
     }
-}
-
-a{
-    color: black;
 }

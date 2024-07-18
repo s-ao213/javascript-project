@@ -303,14 +303,28 @@ for (プロパティ in オブジェクト) {
             <p>
                 今回はHTML、CSS、javascriptを使用するので3つのファイルを作成します。ファイル名はバグ防止のため同じものにしてください。
                 <br>
-                <ul>
+                <u>
                     <li>HTML用ファイル：index.html</li>
                     <li>javascript用ファイル：game.js</li>
                     <li>CSS用ファイル：style.css</li>
-                </ul>
-                これらのファイルを用意出来たら、index.htmlとstyle.cssにそれぞれ下記のコードを貼り付けます。今回はjavascriptの勉強が目的ですので、ここではHTML、CSSについての解説はしていません。気になる人は各自調べてみてください。
-                <br>
+                </u>
             </p>
+            
+            <h3>画像の保存</h3>
+            <p>
+                次にゲームで使用する画像を保存してきます。このゲームで使用するのは4人分のキャラクターと3人分の荷物のイラストです。今回イラストは<a href="https://hpgpixer.jp/#google_vignette">ピクセルガロー</a>様でお借りしました。
+                <ul>
+                        <li>プレイヤーのキャラクター(左右1枚ずつ)：<b>player-left.gif、player-right.gif</b></li>
+                        <li>配達先のキャラクターA：<b>syatyou.gif</b></li>
+                        <li>配達先のキャラクターB：<b>syokunin.gif</b></li>
+                        <li>配達先のキャラクターC：<b>ryourinin.gif</b></li>
+                        <li>配達物A：<b>syatyou1.png</b></li>
+                        <li>配達物B：<b>syokunin1.png</b></li>
+                        <li>配達物C：<b>ryourinin1.png</b></li>
+                </ul>
+            </p>
+            <h3> HTML&CSSファイルの設定</h3>
+            <p>これらのファイルを用意出来たら、index.htmlとstyle.cssにそれぞれ下記のコードを貼り付けます。今回はjavascriptの勉強が目的ですので、ここではHTML、CSSについての解説はしていません。気になる人は各自調べてみてください。</p>
             <div class="code-container">
                 <div class="code-header">
                     <span>index.html</span>
@@ -435,30 +449,179 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-
-.car {
-    background-image: url('car.png');
-    background-size: cover;
-}                    
         </code>
                 </pre>
             </div>
-            <h3>画像の保存</h3>
-            <p>
-                次にゲームで使用する画像を保存してきます。このゲームで使用するのは4人分のキャラクターと3人分の荷物のイラストです。今回イラストは<a href="https://hpgpixer.jp/#google_vignette">こちら</a>のサイト様でお借りしました。
-                <ul>
-                        <li>プレイヤーのキャラクター</li>
-                        <li>配達先のキャラクターA</li>
-                        <li>配達先のキャラクターB</li>
-                        <li>配達先のキャラクターC</li>
-                        <li>配達物A</li>
-                        <li>配達物B</li>
-                        <li>配達物C</li>
-                </ul>
-            </p>
-            <h3> HTML&CSSファイルの設定</h3>
+            <br>
+            
             <h3>変数の設定</h3>
+            <h3>定義されている変数とその役割</h3>
+
+            <strong class="sub">maze</strong>
+            <p>
+                2次元配列で、迷路の構造を定義しています。0は通路、1は壁を表します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code16')">コピー</button>
+                </div>
+                <pre><code id="code16" class="language-javascript">const maze = [
+[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1],
+[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1],
+[0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1],
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+[0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+[1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+[1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+[1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1],
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1]
+];</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">mazeContainer</strong>
+            <p>
+                HTMLの迷路を表示するための要素を保持する変数です。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code17')">コピー</button>
+                </div>
+                <pre><code id="code17" class="language-javascript">const mazeContainer = document.getElementById('maze-container');</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">logContainer</strong>
+            <p>
+                ゲームのログメッセージを表示するための要素を保持する変数です。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code18')">コピー</button>
+                </div>
+                <pre><code id="code18" class="language-javascript">const logContainer = document.getElementById('log-container');</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">player</strong>
+            <p>
+                プレイヤーの現在位置を保持するオブジェクトです。初期位置は迷路の左上に設定されています。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code19')">コピー</button>
+                </div>
+                <pre><code id="code19" class="language-javascript">let player = { x: 1, y: 1 };</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">customers</strong>
+            <p>
+                配達先の顧客の位置と名前、画像を保持する配列です。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code20')">コピー</button>
+                </div>
+                <pre><code id="code20" class="language-javascript">const customers = [
+    { x: 19, y: 0, name: '社長', img: 'syatyou.gif' },
+    { x: 0, y: 10, name: '職人', img: 'syokunin.gif' },
+    { x: 19, y: 10, name: '料理人', img: 'ryourinin.gif' }
+];</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">packages</strong>
+            <p>
+                配達する荷物の位置と名前、画像を保持する配列です。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code21')">コピー</button>
+                </div>
+                <pre><code id="code21" class="language-javascript">let packages = [
+    { x: 5, y: 5, name: '社長', img: 'syatyou1.png' },
+    { x: 10, y: 5, name: '職人', img: 'syokunin1.png' },
+    { x: 15, y: 5, name: '料理人', img: 'ryourinin1.png' }
+];</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">currentPackage</strong>
+            <p>
+                プレイヤーが現在運んでいる荷物を保持する変数です。荷物を拾ったときに設定されます。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code22')">コピー</button>
+                </div>
+                <pre><code id="code22" class="language-javascript">let currentPackage = null;</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">startTime</strong>
+            <p>
+                ゲームの開始時間を保持する変数です。最初のキーが押されたときに設定されます。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code23')">コピー</button>
+                </div>
+                <pre><code id="code23" class="language-javascript">let startTime = null;</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">deliveredPackages</strong>
+            <p>
+                プレイヤーが配達した荷物の数をカウントする変数です。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code24')">コピー</button>
+                </div>
+                <pre><code id="code24" class="language-javascript">let deliveredPackages = 0;s</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">playerDirection</strong>
+            <p>
+                プレイヤーの現在の移動方向を保持する変数です。初期値は'left'です。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code25')">コピー</button>
+                </div>
+                <pre><code id="code25" class="language-javascript">let playerDirection = 'left';</code></pre>
+            </div>
+            <br>
+
+            <strong class="sub">startPosition</strong>
+            <p>
+                ゲームのスタート地点を保持するオブジェクトです。xとy座標を含みます。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code26')">コピー</button>
+                </div>
+                <pre><code id="code26" class="language-javascript">const startPosition = { x: 0, y: 0 };</code></pre>
+            </div>
+            <br>
+
             <h3>関数の設定</h3>
+
             <h3>実行処理</h3>
             <div class="code-container">
                 <div class="code-header">
@@ -477,6 +640,7 @@ body {
             }
         }</code></pre>
             </div>
+            <br>
 
             <!-- <div class="code-container">
                 <div class="code-header">
