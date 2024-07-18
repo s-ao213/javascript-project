@@ -140,6 +140,11 @@ pre {
     margin: 0;
 }
 
+.sub{
+    font-size: 120%;
+    color: #494949;
+}
+
 /* スマートフォン縦 (0-480px) */
 @media only screen and (max-width: 480px) {
     body{
