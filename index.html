@@ -455,9 +455,8 @@ body {
             <br>
             
             <h3>変数の設定</h3>
-            <h3>定義されている変数とその役割</h3>
 
-            <strong class="sub">maze</strong>
+            <h4>maze</h4>
             <p>
                 2次元配列で、迷路の構造を定義しています。0は通路、1は壁を表します。
             </p>
@@ -482,9 +481,10 @@ body {
             </div>
             <br>
 
-            <strong class="sub">mazeContainer</strong>
+            <h4>mazeContainer</h4>
             <p>
                 HTMLの迷路を表示するための要素を保持する変数です。
+                <!-- 要素を保持とは何かについて具体的にわかりやすく -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -495,9 +495,10 @@ body {
             </div>
             <br>
 
-            <strong class="sub">logContainer</strong>
+            <h4>logContainer</h4>
             <p>
                 ゲームのログメッセージを表示するための要素を保持する変数です。
+                <!-- 要素を保持するためとはどういうことかもっと具体的にわかりやすく -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -508,9 +509,10 @@ body {
             </div>
             <br>
 
-            <strong class="sub">player</strong>
+            <h4>player</h4>
             <p>
                 プレイヤーの現在位置を保持するオブジェクトです。初期位置は迷路の左上に設定されています。
+                <!-- オブジェクトとは？ -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -521,9 +523,10 @@ body {
             </div>
             <br>
 
-            <strong class="sub">customers</strong>
+            <h4>customers</h4>
             <p>
                 配達先の顧客の位置と名前、画像を保持する配列です。
+                <!-- 具体的な書き方を書く例とすれば｛x:x座標, y:y座標, name: "役職", img:'画像の名前'｝というような形でわかりやすく詳細に書く -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -538,9 +541,10 @@ body {
             </div>
             <br>
 
-            <strong class="sub">packages</strong>
+            <h4>packages</h4>
             <p>
                 配達する荷物の位置と名前、画像を保持する配列です。
+                <!-- 先ほどのコード同様に書き方を書く -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -555,7 +559,7 @@ body {
             </div>
             <br>
 
-            <strong class="sub">currentPackage</strong>
+            <h4>currentPackage</h4>
             <p>
                 プレイヤーが現在運んでいる荷物を保持する変数です。荷物を拾ったときに設定されます。
             </p>
@@ -568,7 +572,7 @@ body {
             </div>
             <br>
 
-            <strong class="sub">startTime</strong>
+            <h4>startTime</h4>
             <p>
                 ゲームの開始時間を保持する変数です。最初のキーが押されたときに設定されます。
             </p>
@@ -581,7 +585,7 @@ body {
             </div>
             <br>
 
-            <strong class="sub">deliveredPackages</strong>
+            <h4>deliveredPackages</h4>
             <p>
                 プレイヤーが配達した荷物の数をカウントする変数です。
             </p>
@@ -590,13 +594,14 @@ body {
                     <span>game.js</span>
                     <button class="copy-button" onclick="copyCode('code24')">コピー</button>
                 </div>
-                <pre><code id="code24" class="language-javascript">let deliveredPackages = 0;s</code></pre>
+                <pre><code id="code24" class="language-javascript">let deliveredPackages = 0;</code></pre>
             </div>
             <br>
 
-            <strong class="sub">playerDirection</strong>
+            <h4>playerDirection</h4>
             <p>
                 プレイヤーの現在の移動方向を保持する変数です。初期値は'left'です。
+                <!-- これがきょらくたーの向き変更をするときに使うことがわかるように書く -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -607,7 +612,7 @@ body {
             </div>
             <br>
 
-            <strong class="sub">startPosition</strong>
+            <h4>startPosition</h4>
             <p>
                 ゲームのスタート地点を保持するオブジェクトです。xとy座標を含みます。
             </p>
