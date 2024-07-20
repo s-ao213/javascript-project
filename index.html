@@ -27,10 +27,11 @@
         <section>
             <h2 id="1st">どんなゲームを作るか</h2>
             <p>
-                今回作成するのは、簡単な迷路を使ったタイムトライアルゲームです。具体的には下記のデモページにあるようなゲームを作成します。
-                <br>
-                <a href="">作成したいゲームのデモページ</a>
-                <br>
+                今回作成するのは、簡単な迷路を使ったタイムトライアルゲームです。下記のソースコード・デモページにあるようなゲームを作成します。
+                <ul>
+                    <li><a href="https://s-ao213.github.io/javascript-project/game/index.html">作成したいゲームのデモページ</a></li>
+                    <li><a href="https://github.com/s-ao213/javascript-project/tree/2677af2255f665ff4910a98caf581e0999eb3512/game">ソースコード</a></li>
+                </ul>
             </p>
             <div class="point">
                 <br>
@@ -292,7 +293,7 @@ for (プロパティ in オブジェクト) {
                 <button class="copy-button" onclick="copyCode('code13')">コピー</button>
             </div>
             <pre><code id="code13" class="language-javascript">
-            const 変数名 = (引数1, 引数2, ...) => { // 関数が実行されたときに行う処理 };</code>
+            const 変数名 = (引数1, 引数2, ...) =&gt; { // 関数が実行されたときに行う処理 };</code>
             </pre>
         </div>
 
@@ -314,7 +315,7 @@ for (プロパティ in オブジェクト) {
             <p>
                 次にゲームで使用する画像を保存してきます。このゲームで使用するのは4人分のキャラクターと3人分の荷物のイラストです。今回イラストは<a href="https://hpgpixer.jp/#google_vignette">ピクセルガロー</a>様でお借りしました。
                 <ul>
-                        <li>プレイヤーのキャラクター(左右1枚ずつ)：<b>player-left.gif、player-right.gif</b></li>
+                    <li>プレイヤーのキャラクター(左右1枚ずつ)：<b>player-left.gif、player-right.gif</b></li>
                         <li>配達先のキャラクターA：<b>syatyou.gif</b></li>
                         <li>配達先のキャラクターB：<b>syokunin.gif</b></li>
                         <li>配達先のキャラクターC：<b>ryourinin.gif</b></li>
@@ -322,6 +323,7 @@ for (プロパティ in オブジェクト) {
                         <li>配達物B：<b>syokunin1.png</b></li>
                         <li>配達物C：<b>ryourinin1.png</b></li>
                 </ul>
+                <span style="color: red;">これらの画像は<a href="#1st" style="color: red;">このページの冒頭</a>のソースコードのページからダウンロード出来ます。</span>
             </p>
             <h3> HTML&CSSファイルの設定</h3>
             <p>これらのファイルを用意出来たら、index.htmlとstyle.cssにそれぞれ下記のコードを貼り付けます。今回はjavascriptの勉強が目的ですので、ここではHTML、CSSについての解説はしていません。気になる人は各自調べてみてください。</p>
@@ -928,9 +930,6 @@ body {
             </div>
             
             <br>
-
-            <p>今回作成したコードは<a href="">このリンク</a>からも確認できるのでよければ見てみてください。</p>
-
             <!-- <div class="code-container">
                 <div class="code-header">
                     <span>言語</span>
