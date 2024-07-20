@@ -453,7 +453,7 @@ body {
                 </pre>
             </div>
             <br>
-            
+
             <h3>変数の設定</h3>
 
             <h4>maze</h4>
@@ -466,26 +466,29 @@ body {
                     <button class="copy-button" onclick="copyCode('code16')">コピー</button>
                 </div>
                 <pre><code id="code16" class="language-javascript">const maze = [
-[0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1],
-[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1],
-[0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1],
-[0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-[0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
-[1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
-[1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
-[1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1],
-[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1]
-];</code></pre>
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1],
+            [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1],
+            [0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1],
+            [0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+            [0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+            [1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1],
+            [1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1],
+            [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1],
+            [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1]
+            ];</code></pre>
             </div>
             <br>
 
             <h4>mazeContainer</h4>
             <p>
                 HTMLの迷路を表示するための要素を保持する変数です。
-                <!-- 要素を保持とは何かについて具体的にわかりやすく -->
             </p>
+            <div class="words">
+                <strong>「要素を保持する」</strong> とは、簡単に説明するとウェブページ上での場所取りです。HTMLのコード内で表示する場所を確保しておくことで、JavaScriptからその部分を操作したり、内容を変更したりすることが可能になります。もう少し具体的に説明すると、HTMLの要素はウェブページ上の構造を定義するために使用されます。これにより、<strong><span style="color: #B22222"> JavaScriptは特定のHTML要素を操作して、内容を動的に変更したり、スタイルを変更したり、イベントを処理したりすることが可能</span> </strong>になります。
+            </div>
+            <br>
             <div class="code-container">
                 <div class="code-header">
                     <span>game.js</span>
@@ -494,11 +497,11 @@ body {
                 <pre><code id="code17" class="language-javascript">const mazeContainer = document.getElementById('maze-container');</code></pre>
             </div>
             <br>
+            
 
             <h4>logContainer</h4>
             <p>
                 ゲームのログメッセージを表示するための要素を保持する変数です。
-                <!-- 要素を保持するためとはどういうことかもっと具体的にわかりやすく -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -512,8 +515,12 @@ body {
             <h4>player</h4>
             <p>
                 プレイヤーの現在位置を保持するオブジェクトです。初期位置は迷路の左上に設定されています。
-                <!-- オブジェクトとは？ -->
             </p>
+            <div class="words">
+                <strong>オブジェクト</strong>とは、<span style="color: #B22222">複数の関連するデータを一つにまとめたものです。</span><code>player</code>はプレイヤーの位置を示すオブジェクトで、<span style="color: #B22222">X座標とY座標を含んでいます。</span>
+            </div>
+            <br>
+
             <div class="code-container">
                 <div class="code-header">
                     <span>game.js</span>
@@ -526,25 +533,27 @@ body {
             <h4>customers</h4>
             <p>
                 配達先の顧客の位置と名前、画像を保持する配列です。
-                <!-- 具体的な書き方を書く例とすれば｛x:x座標, y:y座標, name: "役職", img:'画像の名前'｝というような形でわかりやすく詳細に書く -->
             </p>
+            <div class="words">
+                <strong>配列</strong>とは、<span style="color: #B22222;">複数のデータを順序付けて保持するためのデータ構造です。</span><code>customers</code>は顧客の位置、名前、画像を含むオブジェクトの配列です。<span style="color: #B22222;">各オブジェクトは、</span><code>{ x: x座標, y: y座標, name: "役職", img: '画像の名前' }</code><span style="color: #B22222;">の形式です。</span>
+            </div>
+            <br>
             <div class="code-container">
                 <div class="code-header">
                     <span>game.js</span>
                     <button class="copy-button" onclick="copyCode('code20')">コピー</button>
                 </div>
                 <pre><code id="code20" class="language-javascript">const customers = [
-    { x: 19, y: 0, name: '社長', img: 'syatyou.gif' },
-    { x: 0, y: 10, name: '職人', img: 'syokunin.gif' },
-    { x: 19, y: 10, name: '料理人', img: 'ryourinin.gif' }
-];</code></pre>
+                { x: 19, y: 0, name: '社長', img: 'syatyou.gif' },
+                { x: 0, y: 10, name: '職人', img: 'syokunin.gif' },
+                { x: 19, y: 10, name: '料理人', img: 'ryourinin.gif' }
+            ];</code></pre>
             </div>
             <br>
 
             <h4>packages</h4>
             <p>
                 配達する荷物の位置と名前、画像を保持する配列です。
-                <!-- 先ほどのコード同様に書き方を書く -->
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -552,10 +561,10 @@ body {
                     <button class="copy-button" onclick="copyCode('code21')">コピー</button>
                 </div>
                 <pre><code id="code21" class="language-javascript">let packages = [
-    { x: 5, y: 5, name: '社長', img: 'syatyou1.png' },
-    { x: 10, y: 5, name: '職人', img: 'syokunin1.png' },
-    { x: 15, y: 5, name: '料理人', img: 'ryourinin1.png' }
-];</code></pre>
+                { x: 5, y: 5, name: '社長', img: 'syatyou1.png' },
+                { x: 10, y: 5, name: '職人', img: 'syokunin1.png' },
+                { x: 15, y: 5, name: '料理人', img: 'ryourinin1.png' }
+            ];</code></pre>
             </div>
             <br>
 
@@ -600,8 +609,7 @@ body {
 
             <h4>playerDirection</h4>
             <p>
-                プレイヤーの現在の移動方向を保持する変数です。初期値は'left'です。
-                <!-- これがきょらくたーの向き変更をするときに使うことがわかるように書く -->
+                プレイヤーの現在の移動方向を保持する変数です。初期値は'left'です。移動時にキャラクターの向きを変更するために使います。
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -614,7 +622,7 @@ body {
 
             <h4>startPosition</h4>
             <p>
-                ゲームのスタート地点を保持するオブジェクトです。xとy座標を含みます。
+                ゲームのスタート地点を保持するオブジェクトです。<code>startPosition</code>オブジェクトには、迷路内の水平方向の位置を示す<code>x</code> と、垂直方向の位置を示す<code>y</code> の2つのプロパティがあります。初期値は（x = 0, y = 0）です。
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -627,25 +635,301 @@ body {
 
             <h3>関数の設定</h3>
 
-            <h3>実行処理</h3>
+            <h4>createMaze</h4>
+            <p>
+                迷路を生成する関数です。迷路の各マスをHTML要素として作成し、<code>mazeContainer</code>に追加します。迷路のマスは、通路（path）または壁（wall）としてクラスが設定されます。このクラスにより、CSSでスタイルでスタイルを設定できるようになります。
+            </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>JavaScript</span>
-                    <button class="copy-button" onclick="copyCode('code1111')">コピー</button>
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code27')">コピー</button>
                 </div>
-                <pre><code id="code1111" class="language-javascript">function checkForCompletion() {
-            if (player.x === startPosition.x && player.y === startPosition.y) {
-                if (deliveredPackages === customers.length) {
-                    const endTime = new Date();
-                    const timeTaken = (endTime - startTime) / 1000;
-                    logMessage(`ゲームクリア！かかった時間: ${timeTaken}秒`);
-                } else {
-                    logMessage('まだ荷物を運びきれていないよ！！');
+                <pre><code id="code27" class="language-javascript">function createMaze() {
+                for (let y = 0; y &lt; maze.length; y++) {
+                    for (let x = 0; x &lt; maze[y].length; x++) {
+                        const cell = document.createElement('div');
+                        cell.classList.add('cell');
+                        if (maze[y][x] === 1) {
+                            cell.classList.add('wall');
+                        } else {
+                            cell.classList.add('path');
+                        }
+                        mazeContainer.appendChild(cell);
+                    }
                 }
-            }
-        }</code></pre>
+            }</code></pre>
             </div>
             <br>
+            
+            <h4>placePlayer</h4>
+            <p>
+                プレイヤーの位置に対応するマスに初期アイコンを表示させる関数です。プレイヤーの初期位置に対応するHTML要素に<code>player</code>クラスを設定し、CSSでプレイヤーの初期アイコンを表示します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code28')">コピー</button>
+                </div>
+                <pre><code id="code28" class="language-javascript">function placePlayer() {
+                const playerCell = getCell(player.x, player.y);
+                playerCell.classList.add('player');
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>placeCustomers</h4>
+            <p>
+                顧客の位置に対応するマスに画像を表示させる関数です。各顧客の位置に対応するHTML要素に<code>customer</code>クラスを追加し、<code>style.backgroundImage</code>プロパティで顧客の画像を設定します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code29')">コピー</button>
+                </div>
+                <pre><code id="code29" class="language-javascript">function placeCustomers() {
+                customers.forEach(customer =&gt; {
+                    const customerCell = getCell(customer.x, customer.y);
+                    customerCell.classList.add('customer');
+                    customerCell.style.backgroundImage = `url(${customer.img})`;
+                });
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>placePackages</h4>
+            <p>
+                荷物の位置に対応するマスに画像を設定する関数です。各荷物の位置に対応するHTML要素に<code>package</code>クラスを追加し、<code>style.backgroundImage</code>プロパティで荷物の画像を設定します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code30')">コピー</button>
+                </div>
+                <pre><code id="code30" class="language-javascript">function placePackages() {
+                packages.forEach(pkg =&gt; {
+                    if (pkg) { // nullでない場合にのみ表示
+                        const packageCell = getCell(pkg.x, pkg.y);
+                        packageCell.classList.add('package');
+                        packageCell.style.backgroundImage = `url(${pkg.img})`;
+                    }
+                });
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>getCell</h4>
+            <p>
+                この関数は、迷路の特定の位置にある座標（<code>x</code>と<code>y</code>）を使って、その位置に対応するマスを取得するものです。迷路はグリッド（格子）状になっていてHTMLの &lt; div &gt;タグを使って表現されています。<code>mazeContainer</code>の中にあるこれらの&lt;div&gt;タグを<strong>「子要素」</strong>と呼びます。これはプレイヤーが移動したときに、プレイヤーの表示を更新するときに使います。
+                <div class="words">
+                    <strong>子要素</strong>とは <span style="color: #B22222;">HTMLの中である要素（親要素）の中に含まれている別の要素のこと</span> です。ここでは、<code>mazeContainer</code>が親要素で、その中にある個々のマス（&lt;div&gt;タグ）が子要素です。
+                </div>
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code31')">コピー</button>
+                </div>
+                <pre><code id="code31" class="language-javascript">function getCell(x, y) {
+                return mazeContainer.children[y * 20 + x];
+            }</code></pre>
+            </div>
+            <br>
+            
+            
+            <h4>logMessage</h4>
+                <p>
+                    ログメッセージを表示する関数です。<code>div</code>要素を作成してメッセージを設定し、<code>logContainer</code>に追加します。最後に、<code>scrollTop</code>プロパティでスクロール位置を更新します。
+                </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code32')">コピー</button>
+                </div>
+                <pre><code id="code32" class="language-javascript">function logMessage(message) {
+                const logEntry = document.createElement('div');
+                logEntry.textContent = message;
+                logContainer.appendChild(logEntry);
+                logContainer.scrollTop = logContainer.scrollHeight;
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>handleKeyPress</h4>
+            <p>
+                キー入力に応じてプレイヤーを移動させる関数です。移動先の座標が通路であれば、プレイヤーを移動させ、荷物や顧客とのインタラクションをチェックします。
+                <div class="words">
+                    <strong>インタラクション</strong>とは、プレイヤーが荷物を拾ったり顧客に渡したりすることです。
+                </div>
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code33')">コピー</button>
+                </div>
+                <pre><code id="code33" class="language-javascript">function handleKeyPress(event) {
+                if (!startTime) {
+                    startTime = new Date();
+                }
+            
+                const { key } = event;
+                let newX = player.x;
+                let newY = player.y;
+                let direction = playerDirection;
+            
+                if (key === 'ArrowUp') {
+                    newY--;
+                }
+                if (key === 'ArrowDown') {
+                    newY++;
+                }
+                if (key === 'ArrowLeft') {
+                    newX--;
+                    direction = 'left';
+                }
+                if (key === 'ArrowRight') {
+                    newX++;
+                    direction = 'right';
+                }
+            
+                if (newX &gt;= 0 && newX &lt; 20 && newY &gt;= 0 && newY &lt; 11 && maze[newY][newX] === 0) {
+                    movePlayer(newX, newY, direction);
+                    checkForPackage();
+                    checkForCustomer();
+                    checkForCompletion();
+                }
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>movePlayer</h4>
+            <p>
+                プレイヤーの位置と方向を更新する関数です。現在のプレイヤーの位置から<code>player</code>クラスと方向クラスを削除し、新しい位置にプレイヤーのクラスを追加します。そして、<code>playerDirection</code>を更新してプレイヤーのアイコンを更新しアイコンの向きを変えます。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code34')">コピー</button>
+                </div>
+                <pre><code id="code34" class="language-javascript">function movePlayer(newX, newY, direction) {
+                getCell(player.x, player.y).classList.remove('player', `player-${playerDirection}`);
+                player.x = newX;
+                player.y = newY;
+                playerDirection = direction;
+                placePlayer();
+                updatePlayerIcon();
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>checkForPackage</h4>
+            <p>
+                プレイヤーが荷物を拾ったかどうかをチェックする関数です。荷物を拾った場合、その荷物をリストから削除し、対応するマスから荷物のクラス<code>package</code>を削除します。これにより迷路上からアイコンが消え、荷物を拾ったことがわかるようにログメッセージを更新します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code35')">コピー</button>
+                </div>
+                <pre><code id="code35" class="language-javascript">function checkForPackage() {
+                packages.forEach((pkg, index) =&gt; {
+                    if (pkg && pkg.x === player.x && pkg.y === player.y) {
+                        packages[index] = null;
+                        getCell(pkg.x, pkg.y).classList.remove('package');
+                        logMessage('荷物を拾いました。');
+                    }
+                });
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>checkForCustomer</h4>
+            <p>
+                プレイヤーが顧客に荷物を届けたかどうかをチェックする関数です。顧客に荷物を届けた場合、対応するマスから顧客のクラスを削除し、ログメッセージを更新します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code36')">コピー</button>
+                </div>
+                <pre><code id="code36" class="language-javascript">function checkForCustomer() {
+                customers.forEach((customer, index) =&gt; {
+                    if (customer.x === player.x && customer.y === player.y) {
+                        getCell(customer.x, customer.y).classList.remove('customer');
+                        logMessage('荷物を届けました。');
+                    }
+                });
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>checkForCompletion</h4>
+            <p>
+                ゲームの完了条件をチェックする関数です。全ての荷物が配達されたかどうかを確認し、完了していればログメッセージを表示します。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code37')">コピー</button>
+                </div>
+                <pre><code id="code37" class="language-javascript">function checkForCompletion() {
+                const allPackagesDelivered = packages.every(pkg =&gt; pkg === null);
+                if (allPackagesDelivered) {
+                    const endTime = new Date();
+                    const timeTaken = (endTime - startTime) / 1000;
+                    logMessage(`ゲームクリア！所要時間: ${timeTaken}秒`);
+                }
+            }</code></pre>
+            </div>
+            <br>
+            
+            <h4>updatePlayerIcon</h4>
+            <p>
+                プレイヤーのアイコンが向いている方向を管理する関数です。プレイヤーの方向に応じたクラスを追加し管理ます。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code38')">コピー</button>
+                </div>
+                <pre><code id="code38" class="language-javascript">function updatePlayerIcon() {
+                const playerCell = getCell(player.x, player.y);
+                playerCell.classList.add(`player-${playerDirection}`);
+            }</code></pre>
+            </div>
+            <br>
+            
+            
+
+            <h3>実行処理</h3>
+            <p>
+                ここまで変数や関数を定義してきましたが、定義するだけではプログラムは動きません。JavaScriptはコードを上から順に実行するため、あらかじめ必要なものを定義した後に実行処理を記述しなければなりません。多くの変数や関数を設定しましたが、関数の中で別の関数を実行している場合もありすべてを個別に実行する必要はないです。それも含めて実行コードはこのような形になります。
+            </p>
+            <div class="code-container">
+                <div class="code-header">
+                    <span>game.js</span>
+                    <button class="copy-button" onclick="copyCode('code39')">コピー</button>
+                </div>
+                <pre><code id="code1111" class="language-javascript">
+            // キー押下時にプレイヤーを移動させる
+            document.addEventListener('keydown', handleKeyPress);
+            
+            // 迷路を生成する
+            createMaze();
+            
+            // プレイヤーを初期位置に配置する
+            placePlayer();
+            
+            // 顧客を迷路内に配置する
+            placeCustomers();
+            
+            // 荷物を迷路内に配置する
+            placePackages();
+                </code></pre>
+            </div>
+            
+            <br>
+
+            <p>今回作成したコードは<a href="">このリンク</a>からも確認できるのでよければ見てみてください。</p>
 
             <!-- <div class="code-container">
                 <div class="code-header">

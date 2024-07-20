@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迷路ゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>        
+    <div class="explain">
+        <h1>迷路ゲーム</h1>
+        <h2>ルール説明</h2>
+        <p>左上のキャラクターを使って、なるべく早く迷路内の落し物持ち主に届けて、1番左上のマスに戻ってくるタイムを競うゲームです。</p>
+        <ul>
+            <li>荷物は一度に一つしか持てません。</li>
+            <li>黄色い場所が地面で緑の場所が壁（障害物）です。</li>
+            <li>荷物を渡すときは、正しい持ち主の周りのマスを踏むと渡せるようになっています。</li>
+        </ul>
+    </div>
+    <div id="container">
+        <div id="maze-container"></div>
+        <div id="log-container">ここにはゲームのログが表示されるよ！</div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

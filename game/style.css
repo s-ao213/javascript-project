@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+}
+
+.explain{
+    padding-right: 45%;
+}
+
+#maze-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(20, 30px);
+    grid-template-rows: repeat(11, 30px);
+    gap: 2px;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+#container {
+    display: flex;
+}
+
+.player {
+    background-color: #0f0;
+    background-image: url('player-right.gif');
+}
+
+.player-left {
+    background-image: url('player-left.gif');
+}
+
+.player-right {
+    background-image: url('player-right.gif');
+}
+
+.customer {
+    background-color: #00f;
+}
+
+.package {
+    background-color: #f00;
+}
+
+.wall {
+    background-color: #006036;
+}
+
+.path {
+    background-color: #D0A900;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+#log-container {
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 5px solid rgb(0, 117, 226);
+    padding: 10px;
+    width: 300px;
+    height: 250px;
+    overflow-y: auto;
+    background-color: #000;
+    color: #ddd;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
