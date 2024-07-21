@@ -6,16 +6,25 @@
         <title>ミニゲーム作成</title> 
         <link rel="stylesheet" href="main.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <a class="pagetop" href="#top"><div class="pagetop__arrow"></div></a>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     </head> 
-    
+
     <header>
         <a class="pagetop" href="#top"><div class="pagetop__arrow"></div></a>
-
+        <input type="checkbox" id="overlay-input">
+        <label for="overlay-input" id="overlay-button">
+            <span></span>
+        </label>
+        <div id="overlay">
+            <ul>
+                <li><a href="#1st" class="menu-item">目次</a></li>
+                <li><a href="#2nd" class="menu-item">javascriptの基礎知識</a></li>
+                <li><a href="#3rd" class="menu-item">ゲームの作り方</a></li>
+            </ul>
+        </div>
     </header>
     <body> 
         <h1 id="top">javascriptを使ったミニゲーム製作体験</h1>

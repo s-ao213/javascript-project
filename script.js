@@ -10,3 +10,18 @@ function copyCode(codeId) {
         console.error('コピーに失敗しました:', err);
     });
 }
+
+document.getElementById('overlay-input').addEventListener('change', function() {
+    if (this.checked) {
+        document.body.classList.add('no-scroll');
+    } else {
+        document.body.classList.remove('no-scroll');
+    }
+});
+
+document.querySelectorAll('.menu-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+        document.getElementById('overlay-input').checked = false;
+        document.body.classList.remove('no-scroll');
+    });
+});

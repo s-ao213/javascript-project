@@ -197,6 +197,119 @@ html {
     transform: translateY(20%) rotate(-45deg);
 }
 
+@keyframes bugfix {
+from {
+    padding: 0;
+}
+to {
+    padding: 0;
+}
+}
+@-webkit-keyframes bugfix {
+from {
+    padding: 0;
+}
+to {
+    padding: 0;
+}
+}
+#overlay-button {
+position: fixed;
+right: 1em;
+top: 1em;
+padding: 26px 11px;
+z-index: 5;
+cursor: pointer;
+user-select: none;
+}
+#overlay-button span {
+height: 4px;
+width: 35px;
+border-radius: 2px;
+background-color: #494949;
+position: relative;
+display: block;
+transition: all .2s ease-in-out;
+}
+#overlay-button span:before {
+top: -10px;
+visibility: visible;
+}
+#overlay-button span:after {
+top: 10px;
+}
+#overlay-button span:before, #overlay-button span:after {
+height: 4px;
+width: 35px;
+border-radius: 2px;
+background-color: #494949;
+position: absolute;
+content: "";
+transition: all .2s ease-in-out;
+}
+#overlay-button:hover span, #overlay-button:hover span:before, #overlay-button:hover span:after {
+background: #494949;
+}
+
+input[type=checkbox] {
+display: none; 
+
+}
+
+input[type=checkbox]:checked ~ #overlay {
+visibility: visible; 
+}
+
+input[type=checkbox]:checked ~ #overlay-button:hover span, input[type=checkbox]:checked ~ #overlay-button span {
+background: transparent;
+
+
+}
+input[type=checkbox]:checked ~ #overlay-button span:before {
+transform: rotate(45deg) translate(7px, 7px);
+
+}
+input[type=checkbox]:checked ~ #overlay-button span:after {
+transform: rotate(-45deg) translate(7px, -7px);
+
+
+}
+
+#overlay {
+height: 100%;
+width: 100%;
+background: #c2e1ffe0;
+z-index: 2;
+visibility: hidden;
+position: fixed;
+top: 0;
+left: 0;
+overflow-y: auto;
+}
+
+#overlay ul {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+height: 100vh;
+padding-left: 0;
+list-style-type: none;
+}
+#overlay ul li {
+padding: 1em;
+}
+#overlay ul li a {
+color: #494949;
+text-decoration: none;
+}
+#overlay ul li a:hover {
+color: #494949!important;
+}
+.no-scroll {
+    overflow: hidden; /* 追加 */
+}
 
 
 @media (hover: hover) and (pointer: fine) {
