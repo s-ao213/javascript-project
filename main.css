@@ -326,6 +326,19 @@ color: #494949!important;
         padding-left: 5%;
         padding-right: 5%;
     }
+        /* ハンバーガーメニューのサイズを小さくする */
+        #overlay-button {
+            right: 1em;
+            top: 1em;
+            padding: 20px 8px; /* サイズを小さく */
+        }
+    
+        #overlay-button span, 
+        #overlay-button span:before, 
+        #overlay-button span:after {
+            height: 3px; /* 高さを小さく */
+            width: 25px; /* 幅を小さく */
+        }
 }
 
 /* スマートフォン横 (480-670px) */

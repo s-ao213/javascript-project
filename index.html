@@ -24,6 +24,7 @@
                 <u><strong><li><a href="#2nd" class="menu-item">javascriptの基礎知識</a></li></strong></u>
                 <li><a href="#1-1" class="menu-item">変数宣言</a></li>
                 <li><a href="#1-2" class="menu-item">データ型</a></li>
+                <li><a href="#1-5" class="menu-item">演算子</a></li>
                 <li><a href="#1-3" class="menu-item">制御構文</a></li>
                 <li><a href="#1-4" class="menu-item">関数宣言</a></li>
 
@@ -79,7 +80,7 @@
         
             <h3 id="1-1">変数宣言</h3>
             <p>
-                JavaScriptでは、変数を宣言する方法として<code>var</code>、<code>let</code>、<code>const</code>があります。<code>let</code>と<code>const</code>は<code>var</code>よりも新しい方法であり、ブロックスコープを持つため、より安全に使えます。ブロックスコープとは、中括弧 <code>{}</code>で囲まれたブロック内でのみ有効な変数のスコープを指します。
+                JavaScriptでは、変数を宣言する方法として<code>var</code>、<code>let</code>、<code>const</code>があります。<code>let</code>と<code>const</code>は<code>var</code>よりも新しい方法であり、ブロックスコープを持つため、より安全に使えます。ブロックスコープとは、中括弧 <code>{}</code>で囲まれたブロック内でのみ有効な変数です。
             </p>
             <div class="code-container">
                 <div class="code-header">
@@ -103,8 +104,11 @@ console.log(z); // 30</code>
         
             <h3 id="1-2">データ型</h3>
             <p>
-                JavaScriptには以下のような基本的なデータ型があります。
+                JavaScriptのデータ型とは、簡単に言えばデータの「種類」を示しています。データ型を理解すると、プログラムでどのようにデータが保存され、操作されるかがわかりやすくなります。
+                <br>
+                その中でも基本となる以下のデータ型について説明します。
             </p>
+
             <ul>
                 <li>文字列型（String）</li>
                 <li>数値型（Number）</li>
@@ -133,8 +137,7 @@ console.log(z); // 30</code>
                     <button class="copy-button" onclick="copyCode('code3')">コピー</button>
                 </div>
                 <pre><code id="code3" class="language-javascript">let number = 42;
-let decimal = 3.14;</code>
-                </pre>
+let decimal = 3.14;</code></pre>
             </div>
             
             <h4>ブール型（Boolean）</h4>
@@ -151,6 +154,31 @@ let isFalse = false;</code>
             
             <h4>特殊型（Undefined, Null）</h4>
             <p>Undefined は変数が定義されていないことを示し、Null は変数に何も値が設定されていないことを示します。</p>
+            
+            <div class="words">
+                <strong>2つ使い分け例</strong> 
+                <br>
+                <p>
+                    undefinedを使用する場面
+                    <ul>
+                        <li>変数を宣言したがまだ値を設定していない場合</li>
+                        <li>関数の引数が渡されなかった場合</li>
+                        <li>存在しないオブジェクトのプロパティにアクセスした場合</li>
+                    </ul>
+                </p>
+
+                <p>
+                    nullを使用する場面
+                    <ul>
+                        <li>変数に「値がない」ことを明示的に示したい場合</li>
+                        <li>変数やオブジェクトのプロパティをリセットまたは初期化する場合</li>
+                        <li>データベースやAPIからのレスポンスで「値がない」ことを示す場合</li>
+                    </ul>    
+                </p>
+                
+            </div>
+            <br>
+
             <div class="code-container">
                 <div class="code-header">
                     <span>javascript</span>
@@ -185,7 +213,7 @@ let func = function() { console.log("Hello!"); };</code>
                 </pre>
             </div>
         
-            <h3 id="1-2">演算子</h3>
+            <h3 id="1-5" >演算子</h3>
             <p>
                 JavaScriptでは、算術演算子や比較演算子、論理演算子などが使われます。
             </p>
@@ -490,7 +518,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-maze</span>
                     <button class="copy-button" onclick="copyCode('code16')">コピー</button>
                 </div>
                 <pre><code id="code16" class="language-javascript">const maze = [
@@ -519,7 +547,7 @@ body {
             <br>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-mazeContainer</span>
                     <button class="copy-button" onclick="copyCode('code17')">コピー</button>
                 </div>
                 <pre><code id="code17" class="language-javascript">const mazeContainer = document.getElementById('maze-container');</code></pre>
@@ -533,7 +561,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-logoContainer</span>
                     <button class="copy-button" onclick="copyCode('code18')">コピー</button>
                 </div>
                 <pre><code id="code18" class="language-javascript">const logContainer = document.getElementById('log-container');</code></pre>
@@ -551,7 +579,7 @@ body {
 
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-player</span>
                     <button class="copy-button" onclick="copyCode('code19')">コピー</button>
                 </div>
                 <pre><code id="code19" class="language-javascript">let player = { x: 1, y: 1 };</code></pre>
@@ -568,7 +596,7 @@ body {
             <br>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-customers</span>
                     <button class="copy-button" onclick="copyCode('code20')">コピー</button>
                 </div>
                 <pre><code id="code20" class="language-javascript">const customers = [
@@ -585,7 +613,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-packages</span>
                     <button class="copy-button" onclick="copyCode('code21')">コピー</button>
                 </div>
                 <pre><code id="code21" class="language-javascript">let packages = [
@@ -602,7 +630,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-currentPackage</span>
                     <button class="copy-button" onclick="copyCode('code22')">コピー</button>
                 </div>
                 <pre><code id="code22" class="language-javascript">let currentPackage = null;</code></pre>
@@ -615,7 +643,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-startTime</span>
                     <button class="copy-button" onclick="copyCode('code23')">コピー</button>
                 </div>
                 <pre><code id="code23" class="language-javascript">let startTime = null;</code></pre>
@@ -628,7 +656,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-deliveredPackages</span>
                     <button class="copy-button" onclick="copyCode('code24')">コピー</button>
                 </div>
                 <pre><code id="code24" class="language-javascript">let deliveredPackages = 0;</code></pre>
@@ -641,7 +669,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-playerDirection</span>
                     <button class="copy-button" onclick="copyCode('code25')">コピー</button>
                 </div>
                 <pre><code id="code25" class="language-javascript">let playerDirection = 'left';</code></pre>
@@ -654,7 +682,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-startPosition</span>
                     <button class="copy-button" onclick="copyCode('code26')">コピー</button>
                 </div>
                 <pre><code id="code26" class="language-javascript">const startPosition = { x: 0, y: 0 };</code></pre>
@@ -669,7 +697,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-createMaze</span>
                     <button class="copy-button" onclick="copyCode('code27')">コピー</button>
                 </div>
                 <pre><code id="code27" class="language-javascript">function createMaze() {
@@ -695,7 +723,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-placePlayer</span>
                     <button class="copy-button" onclick="copyCode('code28')">コピー</button>
                 </div>
                 <pre><code id="code28" class="language-javascript">function placePlayer() {
@@ -711,7 +739,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-placeCustomers</span>
                     <button class="copy-button" onclick="copyCode('code29')">コピー</button>
                 </div>
                 <pre><code id="code29" class="language-javascript">function placeCustomers() {
@@ -730,7 +758,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-placePackages</span>
                     <button class="copy-button" onclick="copyCode('code30')">コピー</button>
                 </div>
                 <pre><code id="code30" class="language-javascript">function placePackages() {
@@ -754,7 +782,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-getCell</span>
                     <button class="copy-button" onclick="copyCode('code31')">コピー</button>
                 </div>
                 <pre><code id="code31" class="language-javascript">function getCell(x, y) {
@@ -770,7 +798,7 @@ body {
                 </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-logMessage</span>
                     <button class="copy-button" onclick="copyCode('code32')">コピー</button>
                 </div>
                 <pre><code id="code32" class="language-javascript">function logMessage(message) {
@@ -791,7 +819,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-handleKeyPress</span>
                     <button class="copy-button" onclick="copyCode('code33')">コピー</button>
                 </div>
                 <pre><code id="code33" class="language-javascript">function handleKeyPress(event) {
@@ -835,7 +863,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-movePlayer</span>
                     <button class="copy-button" onclick="copyCode('code34')">コピー</button>
                 </div>
                 <pre><code id="code34" class="language-javascript">function movePlayer(newX, newY, direction) {
@@ -855,7 +883,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-checkForPackage</span>
                     <button class="copy-button" onclick="copyCode('code35')">コピー</button>
                 </div>
                 <pre><code id="code35" class="language-javascript">function checkForPackage() {
@@ -876,7 +904,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-checkForCustomer</span>
                     <button class="copy-button" onclick="copyCode('code36')">コピー</button>
                 </div>
                 <pre><code id="code36" class="language-javascript">function checkForCustomer() {
@@ -896,7 +924,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-checkForCompletion</span>
                     <button class="copy-button" onclick="copyCode('code37')">コピー</button>
                 </div>
                 <pre><code id="code37" class="language-javascript">function checkForCompletion() {
@@ -916,7 +944,7 @@ body {
             </p>
             <div class="code-container">
                 <div class="code-header">
-                    <span>game.js</span>
+                    <span>game.js-updatePlayerIcon</span>
                     <button class="copy-button" onclick="copyCode('code38')">コピー</button>
                 </div>
                 <pre><code id="code38" class="language-javascript">function updatePlayerIcon() {
