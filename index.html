@@ -20,15 +20,28 @@
         </label>
         <div id="overlay">
             <ul>
-                <li><a href="#1st" class="menu-item">目次</a></li>
-                <li><a href="#2nd" class="menu-item">javascriptの基礎知識</a></li>
-                <li><a href="#3rd" class="menu-item">ゲームの作り方</a></li>
+                <u><strong style="font-size: 120%;"><li><a href="#1st" class="menu-item">目次</a></li></strong></u>
+                <u><strong><li><a href="#2nd" class="menu-item">javascriptの基礎知識</a></li></strong></u>
+                <li><a href="#1-1" class="menu-item">変数宣言</a></li>
+                <li><a href="#1-2" class="menu-item">データ型</a></li>
+                <li><a href="#1-3" class="menu-item">制御構文</a></li>
+                <li><a href="#1-4" class="menu-item">関数宣言</a></li>
+
+                <u><strong><li><a href="#3rd" class="menu-item">ゲームの作り方</a></li></strong></u>
+                <li><a href="#2-1" class="menu-item">ファイルの作成</a></li>
+                <li><a href="#2-2" class="menu-item">画像の保存</a></li>
+                <li><a href="#2-3" class="menu-item">HTML&CSSファイルの設定</a></li>
+                <li><a href="#2-4" class="menu-item">変数の設定</a></li>
+                <li><a href="#2-5" class="menu-item">関数の設定</a></li>
+                <li><a href="#2-6" class="menu-item">実行処理</a></li>
+
             </ul>
         </div>
     </header>
     <body> 
         <h1 id="top">javascriptを使ったミニゲーム製作体験</h1>
 
+        <section>
             <h2>目次</h2>
             <ul>
                 <li><a href="#1st">どんなゲームを作るか</a></li>
@@ -64,7 +77,7 @@
                 JavaScriptはウェブ開発で広く使われるプログラミング言語です。ここでは、JavaScriptの基本的な構文と概念について説明します。
             </p>
         
-            <h3>変数宣言</h3>
+            <h3 id="1-1">変数宣言</h3>
             <p>
                 JavaScriptでは、変数を宣言する方法として<code>var</code>、<code>let</code>、<code>const</code>があります。<code>let</code>と<code>const</code>は<code>var</code>よりも新しい方法であり、ブロックスコープを持つため、より安全に使えます。ブロックスコープとは、中括弧 <code>{}</code>で囲まれたブロック内でのみ有効な変数のスコープを指します。
             </p>
@@ -88,7 +101,7 @@ console.log(z); // 30</code>
             </div>
 
         
-            <h3>データ型</h3>
+            <h3 id="1-2">データ型</h3>
             <p>
                 JavaScriptには以下のような基本的なデータ型があります。
             </p>
@@ -172,7 +185,7 @@ let func = function() { console.log("Hello!"); };</code>
                 </pre>
             </div>
         
-            <h3>演算子</h3>
+            <h3 id="1-2">演算子</h3>
             <p>
                 JavaScriptでは、算術演算子や比較演算子、論理演算子などが使われます。
             </p>
@@ -207,7 +220,7 @@ let logicalNot = !true; // false</code>
                 </pre>
             </div>
         
-            <h3>制御構文</h3>
+            <h3 id="1-3">制御構文</h3>
             <p>
                 JavaScriptでは、コードの実行を制御するために、条件分岐やループが使用されます。
             </p>
@@ -258,13 +271,13 @@ for (プロパティ in オブジェクト) {
             </pre>
             </div>
         
-            <h3>JavaScriptの関数の定義方法</h3>
+            <h3 id="1-4">関数宣言</h3>
         <p>
             JavaScriptでは、以下のように異なる方法で関数を定義することができます。それぞれの方法には特有の特徴があります。
         </p>
         
         <!-- 宣言関数の説明 -->
-        <h4>1. 宣言関数（Function Declaration）</h4>
+        <h4> 宣言関数（Function Declaration）</h4>
         <p>
             宣言関数は、<code>function</code> キーワードを使って定義します。関数名を指定し、その関数が必要とする引数を丸括弧の中に書きます。関数が実行されたときに行う処理は波括弧の中に書きます。
         </p>
@@ -281,7 +294,7 @@ for (プロパティ in オブジェクト) {
         
         
         <!-- 関数式の説明 -->
-        <h4>2. 関数式（Function Expression）</h4>
+        <h4>関数式（Function Expression）</h4>
         <p>
             関数式は、関数を変数に代入する形式で定義します。関数名は省略することもできます。関数が実行されたときに行う処理は波括弧の中に書きます。
         </p>
@@ -296,7 +309,7 @@ for (プロパティ in オブジェクト) {
         </div>
         
         <!-- アロー関数の説明 -->
-        <h4>3. アロー関数（Arrow Function）</h4>
+        <h4>アロー関数（Arrow Function）</h4>
         <p>
             アロー関数は、関数をより簡潔に定義するための方法です。<code>=></code> を使って関数を定義します。引数が1つの場合は丸括弧を省略できます。関数が実行されたときに行う処理は波括弧の中に書きます。
         </p>
@@ -313,7 +326,7 @@ for (プロパティ in オブジェクト) {
         </section>
         <section>
             <h2 id="3rd">ゲームの作り方</h2>
-            <h3>ファイルの作成</h3>
+            <h3 id="2-1">ファイルの作成</h3>
             <p>
                 今回はHTML、CSS、javascriptを使用するので3つのファイルを作成します。ファイル名はバグ防止のため同じものにしてください。
                 <br>
@@ -324,7 +337,7 @@ for (プロパティ in オブジェクト) {
                 </u>
             </p>
             
-            <h3>画像の保存</h3>
+            <h3 id="2-2">画像の保存</h3>
             <p>
                 次にゲームで使用する画像を保存してきます。このゲームで使用するのは4人分のキャラクターと3人分の荷物のイラストです。今回イラストは<a href="https://hpgpixer.jp/#google_vignette">ピクセルガロー</a>様でお借りしました。
                 <ul>
@@ -338,7 +351,7 @@ for (プロパティ in オブジェクト) {
                 </ul>
                 <span style="color: red;">これらの画像は<a href="#1st" style="color: red;">このページの冒頭</a>のソースコードのページからダウンロード出来ます。</span>
             </p>
-            <h3> HTML&CSSファイルの設定</h3>
+            <h3 id="2-3"> HTML&CSSファイルの設定</h3>
             <p>これらのファイルを用意出来たら、index.htmlとstyle.cssにそれぞれ下記のコードを貼り付けます。今回はjavascriptの勉強が目的ですので、ここではHTML、CSSについての解説はしていません。気になる人は各自調べてみてください。</p>
             <div class="code-container">
                 <div class="code-header">
@@ -469,7 +482,7 @@ body {
             </div>
             <br>
 
-            <h3>変数の設定</h3>
+            <h3 id="2-4">変数の設定</h3>
 
             <h4>maze</h4>
             <p>
@@ -648,7 +661,7 @@ body {
             </div>
             <br>
 
-            <h3>関数の設定</h3>
+            <h3 id="2-5">関数の設定</h3>
 
             <h4>createMaze</h4>
             <p>
@@ -915,7 +928,7 @@ body {
             
             
 
-            <h3>実行処理</h3>
+            <h3 id="2-6">実行処理</h3>
             <p>
                 ここまで変数や関数を定義してきましたが、定義するだけではプログラムは動きません。JavaScriptはコードを上から順に実行するため、あらかじめ必要なものを定義した後に実行処理を記述しなければなりません。多くの変数や関数を設定しましたが、関数の中で別の関数を実行している場合もありすべてを個別に実行する必要はないです。それも含めて実行コードはこのような形になります。
             </p>

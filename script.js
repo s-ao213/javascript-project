@@ -25,3 +25,10 @@ document.querySelectorAll('.menu-item').forEach(function(item) {
         document.body.classList.remove('no-scroll');
     });
 });
+
+document.getElementById('overlay-input').addEventListener('change', function() {
+    if (!this.checked) {
+        // メニューが閉じられたときにスクロール位置をリセット
+        document.getElementById('overlay').scrollTop = 0;
+    }
+});

@@ -296,10 +296,12 @@ text-align: center;
 height: 100vh;
 padding-left: 0;
 list-style-type: none;
+margin-top: 2em; /* 1行分のスペースを追加 */
 }
 #overlay ul li {
 padding: 1em;
 }
+
 #overlay ul li a {
 color: #494949;
 text-decoration: none;
