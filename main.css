@@ -116,6 +116,20 @@ h4 {
     box-shadow: 1px 1px 3px #999;
 }
 
+.summary h2 {
+    color: #2c3e50;
+}
+.summary h3 {
+    color: #2980b9;
+}
+.summary p {
+    line-height: 1.6;
+}
+.summary .highlight {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
 .words {
     position: relative;
     border-top: solid 2px #ffa337;
