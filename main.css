@@ -201,7 +201,8 @@ pre[class*=language-] {
 }
 
 :not(pre) > code[class*=language-], pre[class*=language-] {
-    background: #2d2d2d;
+    background: #212530;
+    border-radius: 8px;
 }
 
 :not(pre) > code[class*=language-] {
@@ -287,7 +288,7 @@ pre[class*=language-] {
 
 .code-container {
     position: relative;
-    background-color: #2d2d2d;
+    background-color: #4a4a4a;
     padding: 15px;
     border-radius: 8px;
     overflow: auto;
