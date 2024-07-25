@@ -174,6 +174,7 @@ function checkForCompletion() {
         }
     }
 }
+
 function updatePlayerIcon() {
     const playerCell = getCell(player.x, player.y);
     playerCell.classList.remove('player-up', 'player-down', 'player-left', 'player-right');

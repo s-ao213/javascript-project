@@ -902,13 +902,26 @@ body {
                     <button class="copy-button" onclick="copyCode('code36')">コピー</button>
                 </div>
                 <pre><code id="code36" class="language-javascript">function checkForCustomer() {
-                customers.forEach((customer, index) =&gt; {
-                    if (customer.x === player.x && customer.y === player.y) {
-                        getCell(customer.x, customer.y).classList.remove('customer');
-                        logMessage('荷物を届けました。');
-                    }
-                });
-            }</code></pre>
+    if (!currentPackage) return;
+
+    const customer = customers.find(cust =&gt;
+        Math.abs(cust.x - player.x) &lt;= 1 && Math.abs(cust.y - player.y) &lt;= 1
+    );
+
+    if (customer) {
+        if (customer.name === currentPackage.name) {
+            logMessage(`${customer.name}に${currentPackage.name}の荷物を渡した！`);
+            currentPackage = null;
+            deliveredPackages++;
+            
+            if (deliveredPackages === customers.length) {
+                logMessage('全ての荷物を配達完了！スタート地点に戻ってください。');
+            }
+        } else {
+            logMessage(`${customer.name}には${currentPackage.name}の荷物は渡せない！`);
+        }
+    }
+}</code></pre>
             </div>
             <br>
             
@@ -922,13 +935,16 @@ body {
                     <button class="copy-button" onclick="copyCode('code37')">コピー</button>
                 </div>
                 <pre><code id="code37" class="language-javascript">function checkForCompletion() {
-                const allPackagesDelivered = packages.every(pkg =&gt; pkg === null);
-                if (allPackagesDelivered) {
-                    const endTime = new Date();
-                    const timeTaken = (endTime - startTime) / 1000;
-                    logMessage(`ゲームクリア！所要時間: ${timeTaken}秒`);
-                }
-            }</code></pre>
+    if (player.x === startPosition.x && player.y === startPosition.y) {
+        if (deliveredPackages === customers.length) {
+            const endTime = new Date();
+            const timeTaken = (endTime - startTime) / 1000;
+            logMessage(`ゲームクリア！かかった時間: ${timeTaken}秒`);
+        } else {
+            logMessage('まだ荷物を運びきれていないよ！！');
+        }
+    }
+}</code></pre>
             </div>
             <br>
             
